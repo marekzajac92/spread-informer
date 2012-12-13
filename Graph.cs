@@ -48,9 +48,6 @@ namespace SpreadInformer
         {
             double d = points[FindMax()] - points[FindMin()];
 
-            //if (d < 0.0001)
-           //     d = 0.0001;
-
             width -= 40;
             height = height/2;
 

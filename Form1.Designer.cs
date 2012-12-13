@@ -1,4 +1,11 @@
-﻿namespace SpreadInformer
+﻿using pl.xtb.api.message.codes;
+using pl.xtb.api.message.command;
+using pl.xtb.api.message.records;
+using pl.xtb.api.message.response;
+using pl.xtb.api.streaming;
+using pl.xtb.api.sync;
+
+namespace SpreadInformer
 {
     partial class Form1
     {
