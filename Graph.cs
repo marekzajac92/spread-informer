@@ -10,7 +10,7 @@ namespace SpreadInformer
     {
         double[] points;
 
-        int FindMax()
+        private int FindMax()
         {
             int max = 0;
             for (int i = 1; i < points.Count(); i++)
@@ -22,7 +22,7 @@ namespace SpreadInformer
             return max;
         }
 
-        int FindMin()
+        private int FindMin()
         {
             int min = 0;
 
