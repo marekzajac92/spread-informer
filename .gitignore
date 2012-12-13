@@ -1,0 +1,6 @@
+bin/*
+obj/*
+Properties/*
+Form1.resx
+*.csproj
+*.csproj.user
