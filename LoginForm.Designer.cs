@@ -45,6 +45,7 @@
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // CancelButton
             // 
@@ -103,14 +104,12 @@
             this.label1.Size = new System.Drawing.Size(182, 15);
             this.label1.TabIndex = 6;
             this.label1.Text = "Plase login to your XTB account:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginForm
             // 
             this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(315, 154);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Password);

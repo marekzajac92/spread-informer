@@ -23,15 +23,11 @@ namespace SpreadInformer
         {
             InitializeComponent();
 
-            SyncAPIConnect conn = new SyncAPIConnect(ServerData.DevelopmentServers["DEV"]);
+            //SyncAPIConnect conn = new SyncAPIConnect(ServerData.DevelopmentServers["DEV"]);
 
-            BaseCommand loginCmd = APICommandFactory.createLoginCommand(101195, "uul6rxe", false);
-            string responseJSON = conn.executeCommand(loginCmd.toJSONString());
-            LoginResponse resp = new LoginResponse(responseJSON);
+            //CurrentUserDataResponse ud = APICommandFactory.executeCurrentUserDataCommand(conn, false);
 
-            CurrentUserDataResponse ud = APICommandFactory.executeCurrentUserDataCommand(conn, false);
-
-            label1.Text = ud.Currency;
+            //label1.Text = ud.Currency;
         }
     }
 }
