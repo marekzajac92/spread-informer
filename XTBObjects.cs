@@ -14,5 +14,6 @@ namespace SpreadInformer
     class XTBObjects
     {
         static public SyncAPIConnect connector;
+        static public StreamingAPIConnect scnn;
     }
 }

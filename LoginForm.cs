@@ -30,9 +30,19 @@ namespace SpreadInformer
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            BaseCommand loginCmd = APICommandFactory.createLoginCommand(Int32.Parse(Login.Text), Password.Text, false);
-            string responseJSON = XTBObjects.connector.executeCommand(loginCmd.toJSONString());
-            LoginResponse resp = new LoginResponse(responseJSON);
+            ErrorLabel.Visible = false;
+            try
+            {
+                BaseCommand loginCmd = APICommandFactory.createLoginCommand(long.Parse(Login.Text), Password.Text, false);
+                string responseJSON = XTBObjects.connector.executeCommand(loginCmd.toJSONString());
+                LoginResponse resp = new LoginResponse(responseJSON);
+                StrList xyz = new StrList();
+                XTBObjects.scnn = new StreamingAPIConnect(xyz, ServerData.DevelopmentServers["DEV"], resp);
+            }
+            catch (Exception ex)
+            {
+                ErrorLabel.Visible = true;
+            }
         }
     }
 }
